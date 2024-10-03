@@ -1,0 +1,23 @@
+.container{
+    width: 420px;
+    height: 800px;
+    display: flex;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-content: flex-end;
+}
+.buttons{
+    width: 100px;
+    font-size: 30px;
+    background-color: rgb(238, 237, 237);
+    height: 100px;
+    border: none;
+}
+
+.operator{
+    background-color: rgb(212, 212, 212);
+}
+.equals{
+    background-color: rgb(157, 197, 223);
+}
