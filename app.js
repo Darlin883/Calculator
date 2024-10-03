@@ -26,6 +26,6 @@ if (isNaN(lastValue) && e.target.innerHTML === "=") {
     inputValue.innerText = eval(inputvalue.innerText)
 }
 
-function Calculator(x,op,y){
-
+function Calculator(x){
+    console.log(x.value)
 }
