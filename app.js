@@ -25,3 +25,7 @@ let lastValue = inputValue.innerText.substring(inputValue,innerText.length, inpu
 if (isNaN(lastValue) && e.target.innerHTML === "=") {
     inputValue.innerText = eval(inputvalue.innerText)
 }
+
+function Calculator(x,op,y){
+
+}
