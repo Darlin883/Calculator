@@ -1,5 +1,5 @@
 
 
-function Calculator(x,op,y){
-
+function Calculator(x){
+    console.log(x.value)
 }
