@@ -7,7 +7,8 @@ function Calculator(button){
 
 let value = button.value;
 let display = document.getElementById("changingNum");
-let isOperator = ["addition","subtraction","multiplication","division","%"].includes(value);
+let isOperator = ["addition","subtraction","multiplication","division","%",
+                    "square-root", "square", "reciprocal", "+/-"].includes(value);
 
 if(isOperator){ // all operator handling
     if(previousInput === ""){
@@ -41,6 +42,13 @@ if(value === "back-space"){
     currentInput = currentInput.slice(0,-1);
     display.innerText = currentInput || "0";
 }
+if(value === "square" || value === "square-root" || value === "reciprocal" || value === "+/-"){
+    let result = otherCalculate(previousInput, operator);
+    display.innerText = result;
+    previousInput = result;
+    operator = "";
+}
+
 
 
 }
@@ -68,4 +76,18 @@ function Calculate(num1, op, num2){
         }
         return result;
         
+}
+function otherCalculate(num, op){
+    let x = parseFloat(num);
+    let result;
+
+    if(op === "square-root"){
+       return result = Math.sqrt(x)
+    }else if(op === "square"){
+       return result = x * x;
+    }else if(op === "reciprocal"){
+        return result = 1 / x;
+    }else if(op === "+/-"){
+        return -x;
+    }
 }
