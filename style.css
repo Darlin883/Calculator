@@ -24,6 +24,11 @@
     font-size: 30px;
     background-color: rgb(238, 237, 237);
     border: none;
+} 
+.buttons:hover{
+    background-color: rgb(173, 213, 239);
+    opacity: 0.7;
+    
 }
 .buttons:active {
     opacity: 0.7;
