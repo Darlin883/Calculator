@@ -11,11 +11,18 @@ let isOperator = ["addition","subtraction","multiplication","division","%",
                     "square-root", "square", "reciprocal", "+/-"].includes(value);
 
 if(isOperator){ // all operator handling
-    if(previousInput === ""){
-        previousInput = currentInput;
-        currentInput = "";
+    if(currentInput != ""){
+        if(previousInput != ""){
+            //calculate the result with the previous operator
+            let result = Calculate(previousInput,operator,currentInput);
+            display.innerText = result; // show the result
+            previousInput = result; // store the result as previous input
+        } else{
+            previousInput = currentInput; // store the current input as previous
+        }
+        currentInput = ""; // clear current input
     }
-    operator = value; //stores the operator
+    operator = value; //store the operator
 }
 //if numbers or decimal point is pressed
 if(!isOperator && value !== "=" && value !== "clear" && value !== "back-space"){
@@ -28,8 +35,8 @@ if(value === "="){// equals signs
         let result = Calculate(previousInput,operator,currentInput);
         display.innerText = result;
         currentInput = result;// will store the result as the most current num/input
-        previousInput = "";
-        operator = "";
+        previousInput = ""; // clear prevoius input
+        operator = "";// clear operator
     }
 }
 if(value === "clear"){
