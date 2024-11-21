@@ -9,15 +9,15 @@
 <body>
 
     <div class="container">
-        <div class="num-container"><span>0</span></div>
+        <div class="num-container"><span id="changingNum">0</span></div>
         <button value="%" onclick="Calculator(this)" class="buttons operator">%</button>
         <button value="clear" onclick="Calculator(this)" class="buttons operator">CE</button>
         <button value="clear" onclick="Calculator(this)" class="buttons operator">C</button>
         <button value="back-space" onclick="Calculator(this)" class="buttons operator">BkSpc</button>
 
-        <button value="" onclick="Calculator(this)" class="buttons operator">1/x</button>
+        <button value="reciprocal" onclick="Calculator(this)" class="buttons operator">1/x</button>
         <button value="square" onclick="Calculator(this)" class="buttons operator">x^2</button>
-        <button value="square-root" onclick="Calculator(this)" class="buttons operator">plsh</button>
+        <button value="square-root" onclick="Calculator(this)" class="buttons operator">sqrt</button>
         <button value="division" onclick="Calculator(this)" class="buttons operator">/</button>
 
         <button value="7" onclick="Calculator(this)" class="buttons">7</button>
@@ -33,13 +33,13 @@
         <button value="1" onclick="Calculator(this)" class="buttons">1</button>
         <button value="2" onclick="Calculator(this)" class="buttons">2</button>
         <button value="3" onclick="Calculator(this)" class="buttons">3</button>
-        <button value="addition" class="buttons operator">+</button>
+        <button value="addition" onclick="Calculator(this)" class="buttons operator">+</button>
         
         <button value="+/-" onclick="Calculator(this)" class="buttons">+/-</button>
         <button value="0" onclick="Calculator(this)" class="buttons">0</button>
         <button value="." onclick="Calculator(this)" class="buttons">.</button>
-        <button value="=" onclick="Calculator(this)" class="buttons equals">=</button>
+        <button value="=" id ="=" onclick="Calculator(this)" class="buttons equals">=</button>
     </div>
-    <script src="app.js"></script>
+    <script src="app.js"></script> 
 </body>
 </html>
